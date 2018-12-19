@@ -1,0 +1,96 @@
+{
+    "features": {
+        "deep_3x3_cnn": {
+            "repeats": 3,
+            "layers": [
+                {
+                    "class": "conv_2d",
+                    "dilation_rate": 1,
+                    "filters": "auto",
+                    "strides": 1,
+                    "use_bias": true,
+                    "activation": "relu",
+                    "kernel_initializer": "glorot_uniform",
+                    "bias_initializer": "zeros",
+                    "kernel_size": [
+                        3,
+                        3
+                    ],
+                    "padding": "same",
+                    "l2_regularization": 0.005,
+                    "bias_constraint": "nonneg"
+                },
+                {
+                    "class": "conv_2d",
+                    "dilation_rate": 2,
+                    "filters": "auto",
+                    "strides": 1,
+                    "use_bias": true,
+                    "activation": "relu",
+                    "kernel_initializer": "glorot_uniform",
+                    "bias_initializer": "zeros",
+                    "kernel_size": [
+                        3,
+                        3
+                    ],
+                    "padding": "same",
+                    "l2_regularization": 0.005,
+                    "bias_constraint": "nonneg"
+                },
+                {
+                    "class": "max_pooling_2d",
+                    "pool_size": [
+                        2,
+                        2
+                    ]
+                }
+            ]
+        },
+        "deep_5x5_cnn": {
+            "repeats": 3,
+            "layers": [
+                {
+                    "class": "conv_2d",
+                    "dilation_rate": 1,
+                    "filters": "auto",
+                    "strides": 1,
+                    "use_bias": true,
+                    "activation": "relu",
+                    "kernel_initializer": "glorot_uniform",
+                    "bias_initializer": "zeros",
+                    "kernel_size": [
+                        5,
+                        5
+                    ],
+                    "padding": "same",
+                    "l2_regularization": 0.005,
+                    "bias_constraint": "nonneg"
+                },
+                {
+                    "class": "conv_2d",
+                    "dilation_rate": 2,
+                    "filters": "auto",
+                    "strides": 1,
+                    "use_bias": true,
+                    "activation": "relu",
+                    "kernel_initializer": "glorot_uniform",
+                    "bias_initializer": "zeros",
+                    "kernel_size": [
+                        5,
+                        5
+                    ],
+                    "padding": "same",
+                    "l2_regularization": 0.005,
+                    "bias_constraint": "nonneg"
+                },
+                {
+                    "class": "max_pooling_2d",
+                    "pool_size": [
+                        2,
+                        2
+                    ]
+                }
+            ]
+        }
+    }
+}

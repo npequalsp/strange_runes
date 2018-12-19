@@ -1,0 +1,6 @@
+include README.md
+include AUTHORS.md
+include CHANGELOG.md
+include LICENSE
+recursive-include similarity *
+recursive-include search *
